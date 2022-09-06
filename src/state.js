@@ -4,4 +4,8 @@ const init=atom({
     key:"test",
     default:[]
 });
-export{init}
+const kmapInit=atom({
+    key:"kmap",
+    default:[]
+});
+export{init,kmapInit}

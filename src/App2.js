@@ -1,12 +1,12 @@
 import { useEffect } from "react";
-import { init } from "./state";
+import { init,kmapInit } from "./state";
 import {useRecoilState } from "recoil";
-
 
 
 function App() {
   const [test,setText]=useRecoilState(init);
-    console.log(test);
+  const [kmap,setMap]=useRecoilState(kmapInit);
+    console.log(kmap);
   return (
     <div className="App">
      
