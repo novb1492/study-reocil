@@ -7,6 +7,7 @@ import {useRecoilState } from "recoil";
 function App() {
   let [test,setText]=useRecoilState(init);
   let [kmap,setMap]=useRecoilState(kmapInit);
+  console.log(kmap);
   useEffect(()=>{
     let dataArr=[{text:'t',id:'1'},{text:'t',id:'1'}];
     setText(dataArr);
