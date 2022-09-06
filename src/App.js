@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { init } from "./state";
+import {useRecoilState } from "recoil";
+
+
 
 function App() {
+  let [test,setText]=useRecoilState(init);
+  useEffect(()=>{
+    let dataArr=[{text:'t',id:'1'},{text:'t',id:'1'}];
+    setText(dataArr);
+  },[]);
+  function add() {
+    let dataArr2={...test,ff:{text:'t',id:'1'}};
+    console.log(dataArr2);
+    setText(dataArr2);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     ㄹㅇㄹㅇ
+     {JSON.stringify(test)}
+     ------------------
+     <button onClick={add}>add</button>
     </div>
   );
 }
